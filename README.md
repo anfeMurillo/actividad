@@ -6,7 +6,8 @@
 
 ## Correos Institucionales
 - andres.hurtado03@unicatolica.edu.co
-- andres.diaz.guzman@outlook.com
+- andres.diaz02@unicatolica.edu.co
+- jhonatan.valencia01@unicatolica.edu.co
 
 ## Descripción de la Solución
 
