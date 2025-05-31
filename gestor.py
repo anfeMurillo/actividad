@@ -123,3 +123,39 @@ if name == "main":
     print("Ingrese 5 tareas con sus respectivas prioridades")
     print("(Recuerde: 1 es la prioridad más alta, números mayores indican menor prioridad)")
     print("")
+        # Solicitar al usuario que ingrese 5 tareas
+    for i in range(5):
+        print(f"--- Tarea #{i+1} ---")
+        nombre = input("Nombre de la tarea: ")
+        
+        # Validar que la prioridad sea un número entero
+        while True:
+            try:
+                prioridad = int(input("Prioridad (número entero): "))
+                break
+            except ValueError:
+                print("Error: Debe ingresar un número entero. Intente nuevamente.")
+        
+        # Insertar la tarea en el heap
+        cola_tareas.insert((nombre, prioridad))
+        print(f"Tarea '{nombre}' con prioridad {prioridad} insertada correctamente.\n")
+    
+    # Imprimir el estado del heap después de la inserción
+    print("\nEstado del heap después de insertar todas las tareas:")
+    cola_tareas.print_heap()
+    
+    # Extraer tareas en orden de prioridad
+    print("\nExtrayendo tareas en orden de prioridad:")
+    tareas_extraidas = []
+    while cola_tareas.size > 0:
+        tarea = cola_tareas.extract_min()
+        tareas_extraidas.append(tarea)
+        print(f"Extraída: '{tarea[0]}' con prioridad {tarea[1]}")
+        print("Estado del heap después de la extracción:")
+        cola_tareas.print_heap()
+        print("")
+    
+    # Imprimir la lista final ordenada
+    print("\nTareas en orden de prioridad:")
+    for i, tarea in enumerate(tareas_extraidas):
+        print(f"{i+1}. '{tarea[0]}' (Prioridad: {tarea[1]})")
