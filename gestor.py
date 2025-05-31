@@ -99,3 +99,27 @@ class MinHeap:
         if smallest != i:
             self.swap(i, smallest)
             self.min_heapify(smallest)
+    def print_heap(self):
+        """Imprime el estado actual del heap"""
+        if self.size == 0:
+            print("El Heap está vacío")
+            return
+        
+        print("Estado Actual del Heap:")
+        print("------------------------")
+        print("Índice | Nombre Tarea | Prioridad")
+        print("------------------------")
+        for i in range(self.size):
+            print(f"{i:6d} | {self.heap[i][0]:12s} | {self.heap[i][1]}")
+        print("------------------------")
+
+
+# Uso del programa
+if name == "main":
+    # Crear una nueva cola de tareas con prioridad
+    cola_tareas = MinHeap()
+    
+    print("=== GESTOR DE TAREAS CON PRIORIDAD ===")
+    print("Ingrese 5 tareas con sus respectivas prioridades")
+    print("(Recuerde: 1 es la prioridad más alta, números mayores indican menor prioridad)")
+    print("")
