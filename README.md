@@ -3,6 +3,7 @@
 ## Integrantes
 - Andres Felipe Hurtado Murillo
 - Andres Felipe Diaz Guzman
+- Jhonatan David Valencia
 
 ## Correos Institucionales
 - andres.hurtado03@unicatolica.edu.co
