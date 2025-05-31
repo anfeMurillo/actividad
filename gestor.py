@@ -115,7 +115,7 @@ class MinHeap:
 
 
 # Uso del programa
-if name == "main":
+if __name__ == "__main__":
     # Crear una nueva cola de tareas con prioridad
     cola_tareas = MinHeap()
     
